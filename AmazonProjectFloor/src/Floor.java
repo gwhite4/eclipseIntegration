@@ -29,8 +29,8 @@ public class Floor {
 	
 	//lists of objects
 	List<ShelfArea> shelfAreas;
-    HashMap<Robot, Integer[]> robot_locs;
-    ArrayList<Robot> robots;
+	HashMap<Robot, Integer[]> robot_locs;
+	ArrayList<Robot> robots;
 	
     /**
      * Constructor
@@ -40,8 +40,8 @@ public class Floor {
 		master = m;
 		shelfAreas = new ArrayList<ShelfArea>();
 		robot_locs = new HashMap<>();
-        robots = new ArrayList<>();
-	    shelfAreas.add(new ShelfArea(new Point(100,70),160));
+		robots = new ArrayList<>();
+		shelfAreas.add(new ShelfArea(new Point(100,70),160));
 	    shelfAreas.add(new ShelfArea(new Point(120,70),160));
 	    shelfAreas.add(new ShelfArea(new Point(140,70),160));
 	    seedRobots(5);
@@ -64,7 +64,7 @@ public class Floor {
 	 */
 	public Point randomInShelfArea() {
 		Random r = new Random();
-	    int s = r.nextInt(shelfAreas.size());
+		int s = r.nextInt(shelfAreas.size());
 	    return shelfAreas.get(s).randomPoint();
 	}
 	
@@ -104,16 +104,16 @@ public class Floor {
 	}
 	
 	public Integer[] getRobotPosition(Robot robot) {
-        return robot_locs.get(robot);
-    }
+		return robot_locs.get(robot);
+	}
 
-    public void setRobotPosition(Robot robot, Integer[] position) {
-        robot_locs.put(robot, position);
-    }
+	public void setRobotPosition(Robot robot, Integer[] position) {
+		robot_locs.put(robot, position);
+	}
 
-    public ArrayList<Robot> getAllRobots() {
-        return robots;
-    }
+	public ArrayList<Robot> getAllRobots() {
+		return robots;
+	}
 	
 	//for testing purposes
 	public static void main(String[] args) {
