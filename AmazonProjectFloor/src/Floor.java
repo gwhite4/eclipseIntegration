@@ -42,9 +42,9 @@ public class Floor {
 		robot_locs = new HashMap<>();
 		robots = new ArrayList<>();
 		shelfAreas.add(new ShelfArea(new Point(100,70),160));
-	    shelfAreas.add(new ShelfArea(new Point(120,70),160));
-	    shelfAreas.add(new ShelfArea(new Point(140,70),160));
-	    seedRobots(5);
+		shelfAreas.add(new ShelfArea(new Point(120,70),160));
+		shelfAreas.add(new ShelfArea(new Point(140,70),160));
+		seedRobots(5);
 	}
 	
 	/**
@@ -65,7 +65,7 @@ public class Floor {
 	public Point randomInShelfArea() {
 		Random r = new Random();
 		int s = r.nextInt(shelfAreas.size());
-	    return shelfAreas.get(s).randomPoint();
+		return shelfAreas.get(s).randomPoint();
 	}
 	
 	/**
@@ -73,12 +73,12 @@ public class Floor {
 	 * @param robotcount
 	 */
 	public void seedRobots(int robotcount) {
-        for (int i=0; i<robotcount; i++) {
-            Robot robot = new Robot(i, master, this);
-            Integer[] postion = {10 + i, 0};
-            robot_locs.put(robot, postion);
-            robots.add(robot);
-        }
+		for (int i=0; i<robotcount; i++) {
+			Robot robot = new Robot(i, master, this);
+			Integer[] postion = {10 + i, 0};
+			robot_locs.put(robot, postion);
+			robots.add(robot);
+		}
 	}
 	
 	/**
